@@ -45,6 +45,11 @@
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.restcomm.media.core.control</groupId>
+                <artifactId>mgcp</artifactId>
+                <version>${restcomm.media.core.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.restcomm.media.core</groupId>
                 <artifactId>rtp</artifactId>
                 <version>${restcomm.media.core.version}</version>
