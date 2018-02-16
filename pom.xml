@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.restcomm.media</groupId>
         <artifactId>media-parent</artifactId>
-        <version>1.0.0-15</version>
+        <version>1.0.0-16</version>
     </parent>
 
     <groupId>org.restcomm.media</groupId>
@@ -32,7 +32,8 @@
     </scm>
 
     <properties>
-        <restcomm.media.core.version>8.0.0-SNAPSHOT</restcomm.media.core.version>
+        <restcomm.media.core.version>8.0.0-19</restcomm.media.core.version>
+        <restcomm.media.plugin.vad.version>1.0.0-1</restcomm.media.plugin.vad.version>
     </properties>
 
     <dependencyManagement>
@@ -100,6 +101,13 @@
                 <artifactId>opus-java</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
+
+            <!-- Media Plugins -->
+            <dependency>
+                <groupId>org.restcomm.media.plugin.vad</groupId>
+                <artifactId>media-plugin-vad-noise-threshold</artifactId>
+                <version>${restcomm.media.plugin.vad.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -108,10 +116,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
