@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.restcomm.media</groupId>
         <artifactId>media-parent</artifactId>
-        <version>1.0.0-16</version>
+        <version>1.0.0-17</version>
     </parent>
 
     <groupId>org.restcomm.media</groupId>
@@ -32,8 +32,8 @@
     </scm>
 
     <properties>
-        <restcomm.media.core.version>8.0.0-19</restcomm.media.core.version>
-        <restcomm.media.plugin.vad.version>1.0.0-2</restcomm.media.plugin.vad.version>
+        <restcomm.media.core.version>8.0.0-21</restcomm.media.core.version>
+        <restcomm.media.plugin.vad.version>1.0.0-3</restcomm.media.plugin.vad.version>
     </properties>
 
     <dependencyManagement>
