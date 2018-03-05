@@ -33,7 +33,7 @@
 
     <properties>
         <restcomm.media.core.version>8.0.0-21</restcomm.media.core.version>
-        <restcomm.media.plugin.vad.version>1.0.0-3</restcomm.media.plugin.vad.version>
+        <restcomm.media.plugin.vad.version>1.0.0-4</restcomm.media.plugin.vad.version>
     </properties>
 
     <dependencyManagement>
