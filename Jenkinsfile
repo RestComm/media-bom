@@ -32,7 +32,7 @@ node("cxs-slave-master") {
 
     stage ('Deploy') {
         if(env.PUBLISH_TO_CXS_NEXUS == 'true') {
-            sh "mvn clean install package deploy:deploy -Pattach-sources,generate-javadoc,maven-release -DskipTests=true -DskipNexusStagingDeployMojo=true -DaltDeploymentRepository=nexus::default::$CXS_NEXUS2_URL"
+            sh "mvn clean install package deploy:deploy -DskipTests=true -DskipNexusStagingDeployMojo=true -DaltDeploymentRepository=nexus::default::$CXS_NEXUS2_URL"
         } else {
             echo 'Skipped deployment to CXS Nexus'
         }
@@ -52,7 +52,7 @@ node("cxs-slave-master") {
 
     stage ('Release') {
         if(env.PUBLISH_TO_SONATYPE == 'true') {
-            sh "mvn -fn clean deploy -Dgpg.passphrase=${env.GPG_PASSPHRASE} -Pattach-sources,generate-javadoc,release-sign-artifacts,cxs-oss-release"
+            sh "mvn clean deploy -Dgpg.passphrase=${env.GPG_PASSPHRASE} -Prelease-sign-artifacts,cxs-oss-release -DaltDeploymentRepository=restcomm-releases-repository::default::https://oss.sonatype.org/content/groups/public"
         } else {
             echo 'Skipped deployment to Sonatype'
         }
