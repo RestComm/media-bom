@@ -26,7 +26,7 @@
     </scm>
 
     <properties>
-        <restcomm.media.core.version>8.0.0-21</restcomm.media.core.version>
+        <restcomm.media.core.version>8.0.0-SNAPSHOT</restcomm.media.core.version>
         <restcomm.media.plugin.vad.version>1.0.0-4</restcomm.media.plugin.vad.version>
     </properties>
 
@@ -35,69 +35,69 @@
             <!-- Media Core -->
             <dependency>
                 <groupId>org.restcomm.media.core</groupId>
-                <artifactId>spi</artifactId>
+                <artifactId>media-core-spi</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.control</groupId>
-                <artifactId>mgcp</artifactId>
+                <artifactId>media-core-control-mgcp</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core</groupId>
-                <artifactId>rtp</artifactId>
+                <artifactId>media-core-rtp</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.resource</groupId>
-                <artifactId>dtmf</artifactId>
+                <artifactId>media-core-resource-dtmf</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.resource</groupId>
-                <artifactId>player</artifactId>
+                <artifactId>media-core-resource-player</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.resource</groupId>
-                <artifactId>recorder</artifactId>
+                <artifactId>media-core-resource-recorder</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.asr</groupId>
-                <artifactId>asr-engine</artifactId>
+                <artifactId>media-core-asr-engine</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
 
             <!-- Media Core Codecs -->
             <dependency>
                 <groupId>org.restcomm.media.core.codec</groupId>
-                <artifactId>l16</artifactId>
+                <artifactId>media-core-codec-l16</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.codec</groupId>
-                <artifactId>g711</artifactId>
+                <artifactId>media-core-codec-g711</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.codec</groupId>
-                <artifactId>gsm</artifactId>
+                <artifactId>media-core-codec-gsm</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.codec</groupId>
-                <artifactId>g729</artifactId>
+                <artifactId>media-core-codec-g729</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.codec</groupId>
-                <artifactId>ilbc</artifactId>
+                <artifactId>media-core-codec-ilbc</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.restcomm.media.core.codec.opus</groupId>
-                <artifactId>opus-java</artifactId>
+                <artifactId>media-core-codec-opus-java</artifactId>
                 <version>${restcomm.media.core.version}</version>
             </dependency>
 
@@ -115,6 +115,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <compilerVersion>1.8</compilerVersion>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
